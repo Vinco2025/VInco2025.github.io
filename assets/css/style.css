@@ -1,0 +1,6 @@
+/* Prevent accidental horizontal overflow */
+html, body {
+    overflow-x: hidden;
+    background-color: #020617;
+}
+
