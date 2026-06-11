@@ -1,6 +1,65 @@
-/* Prevent accidental horizontal overflow */
-html, body {
-    overflow-x: hidden;
-    background-color: #020617;
-}
+            html, body {
+                overflow-x: hidden;
+                background-color: #020617;
+            }
+            .photo-card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 500px;
+                width: 380px;
+                margin: 50px auto;
+                border-radius: 40px;
+                border: 4px solid #8b5cf6;
+                margin-left: 150px;
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.7);
+                overflow: hidden;
+                background: #020617;
+            }
+            .photo-card:hover .photo-image {
+                transform: scale(1.05); 
+            }
+            .photo-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 40px;
+                transition: 0.3s ease;
+                transform: scale(1.08) 
+            } 
+            .fade-up {
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 0.8s ease;
+            }
+            .fade-up.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            @view-transition {
+                duration: 0.5s;
+                timing-function: ease-in-out;
+                navigation: auto;
+            }
+            ::view-transition-group(page-content) {
+                animation-duration: 0.5s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+            }
+            ::view-transition-old(page-content) {
+                animation-name: slide-out;
+            }
+            ::view-transition-new(page-content) {
+                animation-name: slide-in;
+            }
+            @keyframes slide-out {
+                to {
+                    translate: translateX(-100vw);
+                }
+            }
+            @keyframes slide-in {
+                from {
+                    translate: translateX(100vw);
+                }
+            }
 
