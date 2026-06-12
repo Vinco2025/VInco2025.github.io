@@ -36,30 +36,21 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-            @view-transition {
-                duration: 0.5s;
-                timing-function: ease-in-out;
-                navigation: auto;
+            .scale-up {
+                opacity: 0;
+                transform: scale(0.8);
+                transition: all 1.3s ease;
             }
-            ::view-transition-group(page-content) {
-                animation-duration: 0.5s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: both;
+            .scale-up.show {
+                opacity: 1;
+                transform: scale(1);
             }
-            ::view-transition-old(page-content) {
-                animation-name: slide-out;
+            .about-section {
+                padding: 100px 0;
+                background: linear-gradient(
+                    to bottom,
+                    #020617 0%,
+                    #1E293B 45%,
+                    #1E293B 100%
+                );
             }
-            ::view-transition-new(page-content) {
-                animation-name: slide-in;
-            }
-            @keyframes slide-out {
-                to {
-                    translate: translateX(-100vw);
-                }
-            }
-            @keyframes slide-in {
-                from {
-                    translate: translateX(100vw);
-                }
-            }
-

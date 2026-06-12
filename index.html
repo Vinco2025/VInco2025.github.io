@@ -18,7 +18,7 @@
             <img src="assets/images/Portfolio Logo.png" alt="Logo" style="width: 65px; height: 50px;">
             <h5 class="ms-5 mb-0" style="font-size: 15px; font-weight: regular; color: #E5E7EB;">Kevin Bartolome | DarkFrame Studio</h5>
             <div class="ms-auto me-2">
-                <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 80px; color: #E5E7EB; align-items: center; font-size: 15px; font-weight: regular;">
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 80px; color: #E5E7EB; align-items: center; font-size: 15px; font-weight: regular; margin-right: 20px;">
                     <li><a style="color: #E5E7EB; text-decoration: none;" href="index.html">Home</a></li>
                     <li><a style="color: #E5E7EB; text-decoration: none;" href="#about">About</a></li>
                     <li><a style="color: #E5E7EB; text-decoration: none;" href="skills.html">Skills</a></li>
@@ -37,42 +37,68 @@
                     <h1 class="display-4 fade-up" style="color: #E5E7EB; font-family: Poppins, sans-serif; font-weight: 700;">I'm Kevin </h1>
                     <h2 class="display-4 fade-up" style="color: #E5E7EB; font-family: Poppins, sans-serif; font-weight: 100;">BSIT Student & <br>
                     Aspiring Developer</h2>
-                    <p class="lead fade-up" style="color: #E5E7EB; display: flex;">I build clean, responsive and user-friendly web experience</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="photo-card fade-up">
-                    <img src="assets/images/icon.jfif" alt="Picture" class="photo-image border border-2 rounded-4">
+                    <p class="lead fade-up" style="color: #E5E7EB; font-family: Inter, sand-serif; font-weight: 100;">I build clean, responsive and user-friendly web experience</p>
+                            <div class="mt-4" style="display: flex; gap: 50px; align-items: center;">
+                                <a href="projects.html" class="fade-up" style="text-decoration: none; border: 3px solid #8b5cf6; background: #8b5cf6; padding: 16px; border-radius: 12px; text-align: center;">
+                                    <h4 class="display-8" style="color: #E5E7EB; font-family: Roboto, sans-serif; font-weight: 600; margin: 5px;">
+                                        View My Work
+                                    </h4>
+                                </a>
+                                <a href="#contact"class="fade-up" style="text-decoration: none; border: 3px solid #E5E7EB; padding: 16px; border-radius: 12px; text-align: center;">
+                                    <h4 class="display-8" style="color: #E5E7EB; font-family: Roboto, sans-serif; font-weight: 600; margin: 5px;">
+                                        Contact Me
+                                    </h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="photo-card scale-up">
+                            <img src="assets/images/icon.jfif" alt="Picture" class="photo-image border border-2 rounded-4">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <section class="about-section text-white">
+        <div class="container">
+            <div class="row">
+                <h4 class="fade-up" style="color: #E5E7EB">About Me</h4>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="photo-card scale-up">
+                <img src="assets/images/icon.jfif" alt="Picture" class="photo-image border border-2 rounded-4">
+            </div>
+        </div>
+    </section>
 
 
-        <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
-        <script type="importmap">
 
-        {
-        "imports": {
-            "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
-            "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.esm.min.js"
-        }
-        }
-        </script>
-        <script>
-            window.addEventListener("load", () => {
-                document.querySelectorAll(".fade-up").forEach((el, index) => {
-                    setTimeout(() => {
-                        el.classList.add("show");
-                    }, index * 200);
-                });
+
+    <script>
+    {
+    "imports"; {
+        "@popperjs/core"; "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+        "bootstrap"; "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.esm.min.js"
+    }
+    }
+    </script>
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelectorAll(".fade-up, .scale-up").forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add("show");
+                }, index * 200);
             });
-        </script>
-        <script type="module">
-        import * as bootstrap from 'bootstrap'
+        });
+    </script>
+    <script type="module">
+    import * as bootstrap from 'bootstrap'
 
-        new bootstrap.Popover(document.getElementById('popoverButton'))
-        </script>
+    new bootstrap.Popover(document.getElementById('popoverButton'))
+    </script>
 </body>
 </html>
