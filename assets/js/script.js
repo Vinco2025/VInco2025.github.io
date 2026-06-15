@@ -21,4 +21,28 @@ window.addEventListener('load', () => {
     if (popoverTrigger && typeof bootstrap !== 'undefined' && bootstrap.Popover) {
         try { new bootstrap.Popover(popoverTrigger); } catch (e) { /* ignore */ }
     }
+
+const track = document.querySelector('.skills-track');
+if (track) {
+    const cards = track.querySelectorAll('.skill-card');
+    let index = 0;
+
+    setInterval(() => {
+        index++;
+        if (index >= cards.length) index = 0;
+
+        const cardWidth = cards[0].offsetWidth + 16;
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+        if (index === cards.length - 1) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                track.style.transform = `translateX(0)`;
+                index = 0;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.6s ease';
+                }, 50);
+            }, 700);
+        }
+    }, 2000);
+}
 });
