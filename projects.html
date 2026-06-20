@@ -13,18 +13,23 @@
 </head>
 
 <body>
-    <div class="container-fluid navbar-dark" style="background: #020617; height: 80px;">
-        <div class="d-flex align-items-center h-100 ps-3">
+    <div class="navbar navbar-expand-md navbar-dark" style="background: #020617; height: 80px;">
+        <div class="container-fluid d-flex align-items-center h-100 ps-3">
             <img src="assets/images/Portfolio Logo.png" alt="Logo" style="width: 65px; height: 50px;">
             <h5 class="ms-5 mb-0" style="font-size: 15px; font-weight: regular; color: #E5E7EB;">Kevin Bartolome | DarkFrame Studio</h5>
             <div class="ms-auto me-2">
-                <ul class="main-nav" style="list-style: none; margin: 0; padding: 0; display: flex; gap: 80px; color: #E5E7EB; align-items: center; font-size: 15px; font-weight: regular; margin-right: 20px;">
-                    <li><a style="color: #E5E7EB; text-decoration: none;" href="index.html">Home</a></li>
-                    <li><a style="color: #E5E7EB; text-decoration: none;" href="index.html#about">About</a></li>
-                    <li><a style="color: #E5E7EB; text-decoration: none;" href="skills.html">Skills</a></li>
-                    <li><a style="color: #E5E7EB; text-decoration: none;" href="projects.html">Projects</a></li>
-                    <li><a style="color: #E5E7EB; text-decoration: none;" href="projects.html#contact">Contact Me</a></li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="main-nav" style="list-style: none;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="projects.html#contact">Contact Me</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
