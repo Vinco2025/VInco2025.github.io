@@ -178,6 +178,14 @@
                 opacity: 1;
                 margin-top: 6px;
             }
+            .skills-section {
+                background: linear-gradient(
+                    to bottom,
+                    #1E293B 0%,
+                    #020617 45%,
+                    #020617 100%
+                )
+            }
             .skill-card {
                 background-color: #0F172A;
                 color: #F1F5F9;
