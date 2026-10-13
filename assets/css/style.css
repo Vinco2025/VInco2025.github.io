@@ -165,20 +165,19 @@
                 filter: brightness(0) invert(1) drop-shadow(0 0 6px #6366F1);
             }
             .social-link span {
-                max-height: 0;
+                height: 30px;
+                margin-top: 6px;
                 overflow: hidden;
                 opacity: 0;
                 font-size: 14px;
                 color: #F1F5F9;
-                transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+                transition: opacity 0.3s ease;
             }
             .social-link:hover {
                 transform: scale(1.1);
             }
             .social-link:hover span { 
-                max-height: 30px;
                 opacity: 1;
-                margin-top: 6px;
             }
             .skills-section {
                 background: linear-gradient(
